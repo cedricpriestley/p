@@ -1,0 +1,22 @@
+{
+  "name": "p",
+  "version": "1.0.0",
+  "description": "p",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedricpriestley/p.git"
+  },
+  "keywords": [
+    "p"
+  ],
+  "author": "cedric",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cedricpriestley/p/issues"
+  },
+  "homepage": "https://github.com/cedricpriestley/p#readme",
+}

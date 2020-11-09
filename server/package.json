@@ -1,0 +1,22 @@
+{
+  "name": "myhttp",
+  "version": "1.0.0",
+  "description": "A Custom-built HTTP server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.4"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "keywords": [
+    "middleware",
+    "router"
+  ],
+  "author": "Cedric Priestley",
+  "license": "ISC"
+}
