@@ -1,22 +1,14 @@
 {
-  "name": "myhttp",
+  "name": "app-router",
   "version": "1.0.0",
-  "description": "A Custom-built HTTP server.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "node test/index.js"
   },
-  "devDependencies": {
-    "nodemon": "1.18.4"
-  },
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "keywords": [
-    "middleware",
-    "router"
-  ],
-  "author": "Cedric Priestley",
-  "license": "ISC"
+  "author": "Cedric",
+  "license": "ISC",
+  "dependencies": {
+    "route-parser": "0.0.5"
+  }
 }

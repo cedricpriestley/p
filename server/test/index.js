@@ -1,14 +1,19 @@
-const myhttp = require("../");
-const app = myhttp();
+const router = require('./router');
+const routes = require('./routes/routes.js');
+const app = router();
+const port = 3000;
 
-app.put("/", function(req, res) {
-  res.send("put Hello World!");
-});
+// app.get('/', (req, res) => res.send('Hello World!'));
+// app.get('/test-route', (req, res) => res.send('Testing testing'));
+// app.get('/user/:username', (req, res) => {
+//   const users = [
+//     { username: 'johndoe', name: 'John Doe' },
+//     { username: 'janesmith', name: 'Jane Smith' }
+//   ];
 
-app.get("/", function(req, res) {
-  res.send("get Hello World!");
-});
+//   const user = users.find(user => user.username === req.params.username);
 
-app.listen(3000, function() {
-  console.log("Second Version of the miniExpress is running on PORT 3000");
-});
+//   res.send(`Hello, ${user.name}!`);
+// });
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
