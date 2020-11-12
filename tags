@@ -5,22 +5,16 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-0	apis/user/.github/renovate.json	/^      "updateTypes": ["minor", "patch", "pin", "digest"],$/;"	s	array:packageRules.0.updateTypes
-0	apis/user/.github/renovate.json	/^    {$/;"	o	array:packageRules
 0	apis/user/package.json	/^    "api",$/;"	s	array:keywords
-0	apis/user/renovate.json	/^    "config:base"$/;"	s	array:extends
 0	manifest.json	/^    {$/;"	o	array:icons
 0	package.json	/^    "p"$/;"	s	array:keywords
 0	server3/package.json	/^    "middleware",$/;"	s	array:keywords
-1	apis/user/.github/renovate.json	/^      "updateTypes": ["minor", "patch", "pin", "digest"],$/;"	s	array:packageRules.0.updateTypes
 1	apis/user/data/users.json	/^  "1": {$/;"	o
 1	apis/user/package.json	/^    "node",$/;"	s	array:keywords
 1	manifest.json	/^    {$/;"	o	array:icons
 1	server3/package.json	/^    "router"$/;"	s	array:keywords
-2	apis/user/.github/renovate.json	/^      "updateTypes": ["minor", "patch", "pin", "digest"],$/;"	s	array:packageRules.0.updateTypes
 2	apis/user/data/users.json	/^  "2": {$/;"	o
 2	apis/user/package.json	/^    "api-server",$/;"	s	array:keywords
-3	apis/user/.github/renovate.json	/^      "updateTypes": ["minor", "patch", "pin", "digest"],$/;"	s	array:packageRules.0.updateTypes
 3	apis/user/data/users.json	/^  "3": {$/;"	o
 3	apis/user/package.json	/^    "express",$/;"	s	array:keywords
 4	apis/user/package.json	/^    "starter",$/;"	s	array:keywords
@@ -31,19 +25,15 @@
 @szmarczak/http-timer	apis/user/package-lock.json	/^    "@szmarczak\/http-timer": {$/;"	o	object:dependencies
 @types/node	package-lock.json	/^        "@types\/node": "*"$/;"	s	object:dependencies.wkx.requires
 @types/node	package-lock.json	/^    "@types\/node": {$/;"	o	object:dependencies
-Accessing the server and returning data	apis/user/README.md	/^### Accessing the server and returning data$/;"	S
 AnonymousFunction8e4207230100	server3/lib/application.js	/^          response.send = function(body) {$/;"	f
 AnonymousFunctionae3fb2b70100	server3/lib/router/index.js	/^  const layer = new Layer(path, function(req, res) {$/;"	f	function:Router.route
 AnonymousFunctioned6ee5700100	server3/test/index.js	/^app.put("\/", function(req, res) {$/;"	f
 AnonymousFunctioned6ee5700200	server3/test/index.js	/^app.get("\/", function(req, res) {$/;"	f
 AnonymousFunctioned6ee5700300	server3/test/index.js	/^app.listen(3000, function() {$/;"	f
-Expanding the server	apis/user/README.md	/^## Expanding the server$/;"	s
-Getting started	apis/user/README.md	/^### Getting started$/;"	S
 Installation	server/README.md	/^## Installation$/;"	s
 Layer	server3/lib/router/index.js	/^const Layer = require(".\/layer.js");$/;"	C
 Layer	server3/lib/router/layer.js	/^function Layer(path, fn) {$/;"	c
 Layer	server3/lib/router/route.js	/^const Layer = require(".\/layer.js");$/;"	C
-Node API Server Starter Kit	apis/user/README.md	/^# Node API Server Starter Kit$/;"	c
 Route	server/router/index.js	/^const Route = require('route-parser');$/;"	C
 Route	server3/lib/router/index.js	/^const Route = require(".\/route.js");$/;"	C
 Route	server3/lib/router/route.js	/^const Route = function(path) {$/;"	c
@@ -52,10 +42,7 @@ Router	server3/lib/router/index.js	/^Router.prototype.get = function(path, fn) {
 Router	server3/lib/router/index.js	/^const Router = function() {$/;"	c
 Run the App	server/README.md	/^## Run the App$/;"	s
 SessionLoad	Session.vim	/^let SessionLoad = 1$/;"	v
-SessionLoad	apis/user/Session.vim	/^let SessionLoad = 1$/;"	v
 Understanding Express.js: Creating Your Own Node HTTP Request Router	server/README.md	/^# Understanding Express.js: Creating Your Own Node HTTP Request Router$/;"	c
-Using the API server	apis/user/README.md	/^## Using the API server$/;"	s
-Why an API server that serves JSON files?	apis/user/README.md	/^## Why an API server that serves JSON files?$/;"	s
 _handles_method	server3/lib/router/route.js	/^Route.prototype._handles_method = function(method) {$/;"	m	class:Route
 abbrev	apis/user/package-lock.json	/^        "abbrev": "1"$/;"	s	object:dependencies.nopt.requires
 abbrev	apis/user/package-lock.json	/^    "abbrev": {$/;"	o	object:dependencies
@@ -63,6 +50,7 @@ abbrev	server3/package-lock.json	/^        "abbrev": "1"$/;"	s	object:dependenci
 abbrev	server3/package-lock.json	/^    "abbrev": {$/;"	o	object:dependencies
 accepts	apis/user/package-lock.json	/^        "accepts": "~1.3.5",$/;"	s	object:dependencies.express.requires
 accepts	apis/user/package-lock.json	/^    "accepts": {$/;"	o	object:dependencies
+addHeaders	utils/index.js	/^const addHeaders = (res) => {$/;"	C
 ansi-align	apis/user/package-lock.json	/^        "ansi-align": "^3.0.0",$/;"	s	object:dependencies.boxen.requires
 ansi-align	apis/user/package-lock.json	/^    "ansi-align": {$/;"	o	object:dependencies
 ansi-align	server3/package-lock.json	/^        "ansi-align": "^2.0.0",$/;"	s	object:dependencies.boxen.requires
@@ -83,13 +71,12 @@ anymatch	apis/user/package-lock.json	/^        "anymatch": "~3.1.1",$/;"	s	objec
 anymatch	apis/user/package-lock.json	/^    "anymatch": {$/;"	o	object:dependencies
 anymatch	server3/package-lock.json	/^        "anymatch": "^2.0.0",$/;"	s	object:dependencies.chokidar.requires
 anymatch	server3/package-lock.json	/^    "anymatch": {$/;"	o	object:dependencies
-app	apis/user/index.js	/^const app = router();$/;"	C
+app	apis/user/server.js	/^const app = router();$/;"	C
 app	server/index.js	/^const app = router();$/;"	C
 app	server/test/index.js	/^const app = router();$/;"	C
 app	server3/lib/myhttp.js	/^const app = require(".\/application");$/;"	C
 app	server3/test/index.js	/^const app = myhttp();$/;"	C
-appRouter	apis/user/routes/routes.js	/^const appRouter = (app, fs) => {$/;"	C
-appRouter	server/routes/routes.js	/^const appRouter = (app, fs) => {$/;"	C
+appRouter	apis/user/routes/routes.js	/^const appRouter = (app) => {$/;"	C
 appRouter	server3/routes/routes.js	/^const appRouter = (app, fs) => {$/;"	C
 arr-diff	server3/package-lock.json	/^        "arr-diff": "^4.0.0",$/;"	s	object:dependencies.micromatch.requires
 arr-diff	server3/package-lock.json	/^        "arr-diff": "^4.0.0",$/;"	s	object:dependencies.nanomatch.requires
@@ -116,7 +103,6 @@ author	apis/user/package.json	/^  "author": "Rob Kendal",$/;"	s
 author	package.json	/^  "author": "cedric",$/;"	s
 author	server/package.json	/^  "author": "Cedric",$/;"	s
 author	server3/package.json	/^  "author": "Cedric Priestley",$/;"	s
-automerge	apis/user/.github/renovate.json	/^      "automerge": true$/;"	b	object:packageRules.0
 background_color	manifest.json	/^  "background_color": "#2e7d32",$/;"	s
 balanced-match	apis/user/package-lock.json	/^        "balanced-match": "^1.0.0",$/;"	s	object:dependencies.brace-expansion.requires
 balanced-match	apis/user/package-lock.json	/^    "balanced-match": {$/;"	o	object:dependencies
@@ -132,6 +118,7 @@ bindings	server3/package-lock.json	/^        "bindings": "^1.5.0",$/;"	s	object:
 bindings	server3/package-lock.json	/^    "bindings": {$/;"	o	object:dependencies
 body-parser	apis/user/package-lock.json	/^        "body-parser": "1.18.3",$/;"	s	object:dependencies.express.requires
 body-parser	apis/user/package-lock.json	/^    "body-parser": {$/;"	o	object:dependencies
+bodyParser	server/router/index.js	/^async function bodyParser(req) {$/;"	f
 boxen	apis/user/package-lock.json	/^        "boxen": "^4.2.0",$/;"	s	object:dependencies.update-notifier.requires
 boxen	apis/user/package-lock.json	/^    "boxen": {$/;"	o	object:dependencies
 boxen	server3/package-lock.json	/^        "boxen": "^1.2.1",$/;"	s	object:dependencies.update-notifier.requires
@@ -229,8 +216,7 @@ crypto-random-string	apis/user/package-lock.json	/^        "crypto-random-string
 crypto-random-string	apis/user/package-lock.json	/^    "crypto-random-string": {$/;"	o	object:dependencies
 crypto-random-string	server3/package-lock.json	/^        "crypto-random-string": "^1.0.0"$/;"	s	object:dependencies.unique-string.requires
 crypto-random-string	server3/package-lock.json	/^    "crypto-random-string": {$/;"	o	object:dependencies
-dataPath	apis/user/routes/users.js	/^    const dataPath = '.\/data\/users.json';$/;"	C
-dataPath	server/routes/users.js	/^    const dataPath = '.\/data\/users.json';$/;"	C
+dataPath	apis/user/routes/users.js	/^  const dataPath = '\/data\/users.json';$/;"	C
 dataPath	server3/routes/users.js	/^    const dataPath = '.\/data\/users.json';$/;"	C
 debug	apis/user/package-lock.json	/^        "debug": "2.6.9",$/;"	s	object:dependencies.body-parser.requires
 debug	apis/user/package-lock.json	/^        "debug": "2.6.9",$/;"	s	object:dependencies.express.requires
@@ -742,7 +728,6 @@ extend-shallow	server3/package-lock.json	/^        "extend-shallow": {$/;"	o	obj
 extend-shallow	server3/package-lock.json	/^        "extend-shallow": {$/;"	o	object:dependencies.set-value.dependencies
 extend-shallow	server3/package-lock.json	/^        "extend-shallow": {$/;"	o	object:dependencies.snapdragon.dependencies
 extend-shallow	server3/package-lock.json	/^    "extend-shallow": {$/;"	o	object:dependencies
-extends	apis/user/renovate.json	/^  "extends": [$/;"	a
 extglob	server3/package-lock.json	/^        "extglob": "^2.0.4",$/;"	s	object:dependencies.micromatch.requires
 extglob	server3/package-lock.json	/^    "extglob": {$/;"	o	object:dependencies
 file-uri-to-path	server3/package-lock.json	/^        "file-uri-to-path": "1.0.0"$/;"	s	object:dependencies.bindings.requires
@@ -764,6 +749,9 @@ fragment-cache	server3/package-lock.json	/^    "fragment-cache": {$/;"	o	object:
 fresh	apis/user/package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:dependencies.express.requires
 fresh	apis/user/package-lock.json	/^        "fresh": "0.5.2",$/;"	s	object:dependencies.send.requires
 fresh	apis/user/package-lock.json	/^    "fresh": {$/;"	o	object:dependencies
+fs	apis/user/routes/routes.js	/^const fs = require('fs');$/;"	C
+fs	apis/user/routes/users.js	/^const fs = require('fs');$/;"	C
+fs	apis/user/server.js	/^const fs = require('fs');$/;"	C
 fs	server/router/index.js	/^const fs = require('fs');$/;"	C
 fs	server3/lib/application.js	/^const fs = require('fs');$/;"	C
 fsevents	apis/user/package-lock.json	/^        "fsevents": "~2.1.2",$/;"	s	object:dependencies.chokidar.requires
@@ -1625,7 +1613,6 @@ package-json	apis/user/package-lock.json	/^        "package-json": "^6.3.0"$/;"	
 package-json	apis/user/package-lock.json	/^    "package-json": {$/;"	o	object:dependencies
 package-json	server3/package-lock.json	/^        "package-json": "^4.0.0"$/;"	s	object:dependencies.latest-version.requires
 package-json	server3/package-lock.json	/^    "package-json": {$/;"	o	object:dependencies
-packageRules	apis/user/.github/renovate.json	/^  "packageRules": [$/;"	a
 parseurl	apis/user/package-lock.json	/^        "parseurl": "~1.3.2",$/;"	s	object:dependencies.express.requires
 parseurl	apis/user/package-lock.json	/^        "parseurl": "~1.3.2",$/;"	s	object:dependencies.finalhandler.requires
 parseurl	apis/user/package-lock.json	/^        "parseurl": "~1.3.2",$/;"	s	object:dependencies.serve-static.requires
@@ -1652,11 +1639,12 @@ picomatch	apis/user/package-lock.json	/^        "picomatch": "^2.2.1"$/;"	s	obje
 picomatch	apis/user/package-lock.json	/^    "picomatch": {$/;"	o	object:dependencies
 pify	server3/package-lock.json	/^        "pify": "^3.0.0"$/;"	s	object:dependencies.make-dir.requires
 pify	server3/package-lock.json	/^    "pify": {$/;"	o	object:dependencies
-port	apis/user/index.js	/^const port = 3000;$/;"	C
+port	apis/user/server.js	/^const port = 3000;$/;"	C
 port	server/index.js	/^const port = 3000;$/;"	C
 port	server/test/index.js	/^const port = 3000;$/;"	C
 posix-character-classes	server3/package-lock.json	/^        "posix-character-classes": "^0.1.0",$/;"	s	object:dependencies.expand-brackets.requires
 posix-character-classes	server3/package-lock.json	/^    "posix-character-classes": {$/;"	o	object:dependencies
+postHandler	server/router/index.js	/^async function postHandler(req, res) {$/;"	f
 prepend-http	apis/user/package-lock.json	/^        "prepend-http": "^2.0.0"$/;"	s	object:dependencies.url-parse-lax.requires
 prepend-http	apis/user/package-lock.json	/^    "prepend-http": {$/;"	o	object:dependencies
 prepend-http	server3/package-lock.json	/^        "prepend-http": "^1.0.1"$/;"	s	object:dependencies.url-parse-lax.requires
@@ -1695,8 +1683,7 @@ rc	apis/user/package-lock.json	/^    "rc": {$/;"	o	object:dependencies
 rc	server3/package-lock.json	/^        "rc": "^1.0.1"$/;"	s	object:dependencies.registry-url.requires
 rc	server3/package-lock.json	/^        "rc": "^1.1.6",$/;"	s	object:dependencies.registry-auth-token.requires
 rc	server3/package-lock.json	/^    "rc": {$/;"	o	object:dependencies
-readFile	apis/user/routes/users.js	/^    const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {$/;"	C
-readFile	server/routes/users.js	/^    const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {$/;"	C
+readFile	apis/user/routes/users.js	/^  const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {$/;"	C
 readFile	server3/routes/users.js	/^    const readFile = (callback, returnJson = false, filePath = dataPath, encoding = 'utf8') => {$/;"	C
 readable-stream	server3/package-lock.json	/^        "readable-stream": "^2.0.2"$/;"	s	object:dependencies.readdirp.requires
 readable-stream	server3/package-lock.json	/^    "readable-stream": {$/;"	o	object:dependencies
@@ -2368,19 +2355,16 @@ retry-as-promised	package-lock.json	/^    "retry-as-promised": {$/;"	o	object:de
 route	server3/lib/router/index.js	/^Router.prototype.route = function route(path) {$/;"	m	class:Router
 route-parser	server/package-lock.json	/^    "route-parser": {$/;"	o	object:dependencies
 route-parser	server/package.json	/^    "route-parser": "0.0.5"$/;"	s	object:dependencies
-router	apis/user/index.js	/^const router = require('..\/..\/server\/router');$/;"	C
+router	apis/user/server.js	/^const router = require('..\/..\/server\/router');$/;"	C
 router	server/index.js	/^const router = require('.\/router');$/;"	C
 router	server/router/index.js	/^  const router = (() => {$/;"	C
 router	server/test/index.js	/^const router = require('.\/router');$/;"	C
-routes	apis/user/index.js	/^const routes = require('.\/routes\/routes.js');$/;"	C
+routes	apis/user/server.js	/^const routes = require('.\/routes\/routes.js')(app, fs);$/;"	C
 routes	server/index.js	/^const routes = require('.\/routes\/routes.js');$/;"	C
 routes	server/test/index.js	/^const routes = require('.\/routes\/routes.js');$/;"	C
 s:so_save	Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
-s:so_save	apis/user/Session.vim	/^let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0$/;"	v
 s:sx	Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
-s:sx	apis/user/Session.vim	/^let s:sx = expand("<sfile>:p:r")."x.vim"$/;"	v
 s:wipebuf	Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
-s:wipebuf	apis/user/Session.vim	/^  let s:wipebuf = bufnr('%')$/;"	v
 safe-buffer	apis/user/package-lock.json	/^        "safe-buffer": "5.1.2",$/;"	s	object:dependencies.express.requires
 safe-buffer	apis/user/package-lock.json	/^    "safe-buffer": {$/;"	o	object:dependencies
 safe-buffer	server3/package-lock.json	/^        "safe-buffer": "^5.0.1"$/;"	s	object:dependencies.registry-auth-token.requires
@@ -2573,7 +2557,6 @@ update-notifier	apis/user/package-lock.json	/^        "update-notifier": "^4.1.0
 update-notifier	apis/user/package-lock.json	/^    "update-notifier": {$/;"	o	object:dependencies
 update-notifier	server3/package-lock.json	/^        "update-notifier": "^2.3.0"$/;"	s	object:dependencies.nodemon.requires
 update-notifier	server3/package-lock.json	/^    "update-notifier": {$/;"	o	object:dependencies
-updateTypes	apis/user/.github/renovate.json	/^      "updateTypes": ["minor", "patch", "pin", "digest"],$/;"	a	object:packageRules.0
 urix	server3/package-lock.json	/^        "urix": "^0.1.0"$/;"	s	object:dependencies.source-map-resolve.requires
 urix	server3/package-lock.json	/^    "urix": {$/;"	o	object:dependencies
 url	apis/user/package.json	/^    "url": "git+https:\/\/github.com\/bpk68\/api-server-starter.git"$/;"	s	object:repository
@@ -2587,9 +2570,7 @@ url-parse-lax	server3/package-lock.json	/^    "url-parse-lax": {$/;"	o	object:de
 use	server3/package-lock.json	/^        "use": "^3.1.0"$/;"	s	object:dependencies.snapdragon.requires
 use	server3/package-lock.json	/^    "use": {$/;"	o	object:dependencies
 userRoutes	apis/user/routes/routes.js	/^const userRoutes = require('.\/users');$/;"	C
-userRoutes	apis/user/routes/users.js	/^const userRoutes = (app, fs) => {$/;"	C
-userRoutes	server/routes/routes.js	/^const userRoutes = require('.\/users');$/;"	C
-userRoutes	server/routes/users.js	/^const userRoutes = (app, fs) => {$/;"	C
+userRoutes	apis/user/routes/users.js	/^const userRoutes = (app) => {$/;"	C
 userRoutes	server3/routes/routes.js	/^const userRoutes = require('.\/users');$/;"	C
 userRoutes	server3/routes/users.js	/^const userRoutes = (app, fs) => {$/;"	C
 util-deprecate	server3/package-lock.json	/^        "util-deprecate": "~1.0.1"$/;"	s	object:dependencies.readable-stream.requires
@@ -3039,8 +3020,7 @@ write-file-atomic	apis/user/package-lock.json	/^        "write-file-atomic": "^3
 write-file-atomic	apis/user/package-lock.json	/^    "write-file-atomic": {$/;"	o	object:dependencies
 write-file-atomic	server3/package-lock.json	/^        "write-file-atomic": "^2.0.0",$/;"	s	object:dependencies.configstore.requires
 write-file-atomic	server3/package-lock.json	/^    "write-file-atomic": {$/;"	o	object:dependencies
-writeFile	apis/user/routes/users.js	/^    const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {$/;"	C
-writeFile	server/routes/users.js	/^    const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {$/;"	C
+writeFile	apis/user/routes/users.js	/^  const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {$/;"	C
 writeFile	server3/routes/users.js	/^    const writeFile = (fileData, callback, filePath = dataPath, encoding = 'utf8') => {$/;"	C
 xdg-basedir	apis/user/package-lock.json	/^        "xdg-basedir": "^4.0.0"$/;"	s	object:dependencies.configstore.requires
 xdg-basedir	apis/user/package-lock.json	/^        "xdg-basedir": "^4.0.0"$/;"	s	object:dependencies.update-notifier.requires

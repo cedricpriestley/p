@@ -52,7 +52,6 @@ if (cluster.isMaster && numCPUs) {
   const server = require("http").Server(app);
 
 */
-
   const router = (() => {
     let routes = [];
 
@@ -72,6 +71,8 @@ if (cluster.isMaster && numCPUs) {
 
     const get = (route, handler) => addRoute('get', route, handler);
     const post = (route, handler) => addRoute('post', route, handler);
+    const put = (route, handler) => addRoute('put', route, handler);
+    const del = (route, handler) => addRoute('delete', route, handler);
 
     const router = () => {
       const listen = (port, cb) => {
@@ -81,28 +82,41 @@ if (cluster.isMaster && numCPUs) {
             console.log('request ', req.url);
 
             const method = req.method.toLowerCase();
-            const url = req.url.toLowerCase();
+            let url = req.url.toLowerCase();
             const found = findRoute(method, url);
 
-            if (!res.send) {
-              res.send = function(body) {
-                res.writeHead(200, {
-                  "Content-Type": "text/plain"
-                });
-                res.end(body);
-              };
-            }
-
-            let data = '';
-            req.on('data', chunk => {
-              data += chunk;
-            })
-            req.on('end', () => {
-              // JSON.parse(data).todo //
-              console.log(data)
-            })
+            // if (!res.send) {
+            //   res.send = function(body) {
+            //     res.writeHead(200, {
+            //       "Content-Type": "text/plain"
+            //     });
+            //     res.end(body);
+            //   };
+            // }
 
             if (found) {
+
+              switch (method) {
+                case "post":
+                  // req.body = await bodyParser(req);
+                  postHandler(req, res);
+                  break
+
+                case "get":
+                  break
+
+                case "put":
+                  postHandler(req, res);
+                  // req.body = await bodyParser(req);
+                  break
+
+                case "delete":
+                  break
+
+                default:
+                  response.writeHead(400, { "Content-type": "text/plain" })
+              }
+
               req.params = found.params;
               res.send = content => {
                 res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -111,30 +125,30 @@ if (cluster.isMaster && numCPUs) {
 
               return found.handler(req, res);
             } else {
-              if (url == './') {
+              if (url == './' || url == '/') {
                 url = './index.html';
               }
 
-              const extname = String(path.extname(url)).toLowerCase();
-              const mimeTypes = {
-                '.html': 'text/html',
-                '.js': 'text/javascript',
-                '.css': 'text/css',
-                '.json': 'application/json',
-                '.png': 'image/png',
-                '.jpg': 'image/jpg',
-                '.gif': 'image/gif',
-                '.svg': 'image/svg+xml',
-                '.wav': 'audio/wav',
-                '.mp4': 'video/mp4',
-                '.woff': 'application/font-woff',
-                '.ttf': 'application/font-ttf',
-                '.eot': 'application/vnd.ms-fontobject',
-                '.otf': 'application/font-otf',
-                '.wasm': 'application/wasm',
-              };
+              // const extname = String(path.extname(url)).toLowerCase();
+              // const mimeTypes = {
+              //   '.html': 'text/html',
+              //   '.js': 'text/javascript',
+              //   '.css': 'text/css',
+              //   '.json': 'application/json',
+              //   '.png': 'image/png',
+              //   '.jpg': 'image/jpg',
+              //   '.gif': 'image/gif',
+              //   '.svg': 'image/svg+xml',
+              //   '.wav': 'audio/wav',
+              //   '.mp4': 'video/mp4',
+              //   '.woff': 'application/font-woff',
+              //   '.ttf': 'application/font-ttf',
+              //   '.eot': 'application/vnd.ms-fontobject',
+              //   '.otf': 'application/font-otf',
+              //   '.wasm': 'application/wasm',
+              // };
 
-              const contentType = mimeTypes[extname] || 'application/octet-stream';
+              // const contentType = mimeTypes[extname] || 'application/octet-stream';
 
               fs.readFile(url, (error, content) => {
                 if (error) {
@@ -145,13 +159,21 @@ if (cluster.isMaster && numCPUs) {
                     });
                   } else {
                     res.writeHead(500);
-                    res.end(
-                      `Sorry, check with the site admin for error: ${error.code} ..\n`,
-                    );
+                    // res.end(
+                    //   `Sorry, check with the site admin for error: ${error.code} ..\n`,
+                    // );
                   }
                 } else {
-                  res.writeHead(200, { 'Content-Type': contentType });
-                  res.end(content, 'utf-8');
+                  // res.writeHead(200, { 'Content-Type': 'application/json' });
+                  // // res.writeHead(200, { 'Content-Type': contentType });
+                  // res.end(content, 'utf-8');
+                  // req.params = found.params;
+                  res.send = content => {
+                    res.writeHead(200, { 'Content-Type': 'text/plain' });
+                    res.end(content, 'utf-8');
+                  };
+
+                  return found.handler(req, res);
                 }
               });
             }
@@ -165,11 +187,47 @@ if (cluster.isMaster && numCPUs) {
       return {
         get,
         post,
+        put,
+        del,
         listen
       };
     };
 
     return router;
   })();
+
+
+/**
+ * Extract posted data from request body
+ * @param req
+ * @returns {Promise<any>}
+ */
+async function bodyParser(req) {
+  return new Promise((resolve, reject) => {
+    let totalChunked = ""
+    req
+      .on("error", err => {
+        console.error(err)
+        reject()
+      })
+      .on("data", chunk => {
+        totalChunked += chunk
+      })
+      .on("end", () => {
+        request.body = JSON.parse(totalChunked)
+        resolve()
+      })
+  })
+}
+
+async function postHandler(req, res) {
+  try {
+    await bodyParser(req)
+  } catch (err) {
+    response.writeHead(400, { "Content-type": "text/plain" })
+    response.write("Invalid body data was provided", err.message)
+    response.end()
+  }
+}
 
 module.exports = router;
