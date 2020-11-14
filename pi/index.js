@@ -1,11 +1,13 @@
-const sqlite3 = require('sqlite3').verbose();
+// const sqlite3 = require('sqlite3').verbose();
 let db = new sqlite3.Database('./db/users.db', sqlite3.OPEN_CREATE, (err) => {
   if (err) {
-    console.error(err.message);
+    // console.error(err.message);
+    console.log(err.message);
   }
   console.log('Connected to the chinook database.');
 });
 
+console.log("hellod2");
 db.serialize(function() {
   db.run("CREATE TABLE lorem (info TEXT)");
 
