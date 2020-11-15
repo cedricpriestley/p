@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jsonapi-server": "^4.2.0",
+    "jsonapi-store-relationaldb": "^5.0.0",
+    "sqlite3": "^5.0.0"
+  }
 }
