@@ -34,12 +34,37 @@ badd +9 ~/projs/p/pi/test3.js
 badd +35 ~/projs/p/pi/authenticate.js
 badd +18 ~/projs/p/pi/knex.js
 badd +1 ~/projs/p/pi/knex/index.js
-badd +14 knexfile.js
+badd +4 knexfile.js
 badd +8 migrations/20201209003902_roles.js
-badd +29 migrations/users.js
+badd +1 ~/projs/knex_objection_crud_example/package.json
+badd +11 ~/projs/knex_objection_crud_example/models/Role.js
+badd +1 ~/projs/knex_objection_crud_example/models/User.js
+badd +1 ~/projs/knex_objection_crud_example/seeds/roles.js
+badd +1 ~/projs/knex_objection_crud_example/app.js
+badd +2 index.js
+badd +7 seeds/users.js
+badd +14 models/user.js
+badd +22 ~/projs/objection.js/examples/minimal/app.js
+badd +1 ~/projs/objection.js/examples/minimal/models/Person.js
+badd +22 app.js
+badd +1 ~/projs/p/pi/index.js
+badd +1 migrations/20201209004504_users.js
+badd +1 migrations/permissions.js
+badd +4 migrations/roles.js
+badd +29 migrations3/users.js
+badd +1 migrations/users.js
+badd +41 users.js
+badd +1 users_roles.js
+badd +1 roles_permissions_fk.js
+badd +17 migrations/roles_permissions.js
+badd +18 migrations/users_roles.js
+badd +3 seeds/roles.js
+badd +7 seeds/permissions.js
+badd +6 seeds/users_roles.js
+badd +7 seeds/roles_permissions.js
 argglobal
 %argdel
-edit migrations/users.js
+edit seeds/roles_permissions.js
 set splitbelow splitright
 wincmd t
 set winminheight=0
@@ -57,14 +82,18 @@ setlocal fdn=9
 setlocal fen
 1
 normal! zo
-108
+4
 normal! zo
-let s:l = 108 - ((14 * winheight(0) + 14) / 29)
+4
+normal! zo
+6
+normal! zo
+let s:l = 6 - ((5 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-108
-normal! 011|
+6
+normal! 036|
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

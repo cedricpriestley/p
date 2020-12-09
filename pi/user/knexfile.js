@@ -1,23 +1,23 @@
 // Update with your config settings.
 
 module.exports = {
-  development: {
-    client: 'mysql',
-    connection: {
-      host: '127.0.0.1',
-      user: 'root', // replace with your mysql username
-      password: 'root', // replace with your mysql password
-      database: 'users'
-    },
-    debug: true
-  },
-
   // development: {
-  //   client: 'sqlite3',
+  //   client: 'mysql',
   //   connection: {
-  //     filename: './dev.sqlite3'
-  //   }
+  //     host: '127.0.0.1',
+  //     user: 'root', // replace with your mysql username
+  //     password: 'root', // replace with your mysql password
+  //     database: 'users'
+  //   },
+  //   debug: true
   // },
+
+  development: {
+    client: 'sqlite3',
+    connection: {
+      filename: './users.db'
+    }
+  },
 
   staging: {
     client: 'postgresql',

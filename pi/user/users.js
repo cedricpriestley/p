@@ -1,6 +1,6 @@
 exports.up = function(knex) {
   return knex.schema
-
+ 
     .createTable("users", function(table) {
       table
         .uuid("id")
@@ -20,7 +20,7 @@ exports.up = function(knex) {
       table.string("password").notNullable()
       table.timestamps(true, true)
     })
-
+ 
     .createTable("articles", function(table) {
       table
         .uuid("id")
@@ -45,7 +45,7 @@ exports.up = function(knex) {
         .onDelete("CASCADE")
       table.timestamps(true, true)
     })
-
+ 
     .createTable("comments", function(table) {
       table
         .uuid("id")
@@ -65,7 +65,7 @@ exports.up = function(knex) {
         .onDelete("CASCADE")
       table.timestamps(true, true)
     })
-
+ 
     .createTable("favorites", function(table) {
       table
         .uuid("id")
@@ -84,7 +84,7 @@ exports.up = function(knex) {
         .onDelete("CASCADE")
       table.timestamps(true, true)
     })
-
+ 
     .createTable("followers", function(table) {
       table
         .uuid("id")
@@ -104,7 +104,7 @@ exports.up = function(knex) {
       table.unique(["user", "follower"])
       table.timestamps(true, true)
     })
-
+ 
     .createTable("tags", function(table) {
       table
         .uuid("id")
@@ -117,7 +117,7 @@ exports.up = function(knex) {
         .notNullable()
       table.timestamps(true, true)
     })
-
+ 
     .createTable("articles_tags", function(table) {
       table
         .uuid("id")
@@ -138,7 +138,7 @@ exports.up = function(knex) {
       table.timestamps(true, true)
     })
 }
-
+ 
 exports.down = function(knex) {
   return knex.schema
     .dropTableIfExists("users")
