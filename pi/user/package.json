@@ -1,21 +1,19 @@
 {
-  "name": "pi",
+  "name": "user",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jsonapi-server": "^4.2.0",
-    "jsonapi-store-relationaldb": "^5.0.0",
     "knex": "^0.21.12",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "objection": "^2.2.3",
-    "sequelize": "^6.3.5",
-    "sequelize-auto": "^0.7.4",
     "sqlite3": "^5.0.0"
   }
 }
