@@ -1,6 +1,6 @@
 'use strict'
 
-const jsonApi = require('../..')
+const jsonApi = require("jsonapi-server");
 const timestampHandler = module.exports = new jsonApi.ChainHandler()
 
 timestampHandler.beforeSearch = (request, callback) => {

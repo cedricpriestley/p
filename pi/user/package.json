@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jsonapi-serializer": "^3.6.6",
     "jsonapi-server": "^4.2.0",
     "knex": "^0.21.12",
     "mysql2": "^2.2.5",
+    "node-json-transform": "^1.1.1",
     "objection": "^2.2.3",
     "sqlite3": "^5.0.0"
   }

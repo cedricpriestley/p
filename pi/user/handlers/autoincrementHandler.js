@@ -1,6 +1,6 @@
 'use strict'
 
-const jsonApi = require('../..')
+const jsonApi = require("jsonapi-server");
 
 const chainHandler = new jsonApi.ChainHandler()
 

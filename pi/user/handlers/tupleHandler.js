@@ -1,5 +1,5 @@
 'use strict'
 
-const jsonApi = require('../..')
+const jsonApi = require("jsonapi-server");
 
 module.exports = new jsonApi.MemoryHandler()

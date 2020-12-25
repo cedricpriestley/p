@@ -1,6 +1,6 @@
 'use strict'
 
-const jsonApi = require('../..')
+const jsonApi = require("jsonapi-server");
 const authenticationHandler = module.exports = new jsonApi.ChainHandler()
 
 authenticationHandler.beforeSearch = (request, callback) => {

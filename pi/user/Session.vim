@@ -7,18 +7,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 migrations/roles_permissions.js
-badd +6 migrations/users_roles.js
-badd +7 seeds/users.js
-badd +18 users.js
-badd +2 migrations/users.js
-badd +1 seeds/permissions.js
-badd +1 index.js
 badd +5 server.js
-badd +14 package.json
-badd +1 ~/projs/p/pi/index.js
-badd +1 handlers/usersHandler.js
-badd +1 resources/users.js
+badd +19 resources/users.js
+badd +1 node_modules/jsonapi-server/lib/MemoryHandler.js
+badd +31 handlers/usersHandler.js
+badd +106 handlers/usersHandler2.js
 argglobal
 %argdel
 edit handlers/usersHandler.js
@@ -37,11 +30,77 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=9
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 10) / 21)
+34
+normal! zo
+37
+normal! zo
+37
+normal! zo
+60
+normal! zo
+75
+normal! zo
+80
+normal! zo
+81
+normal! zo
+96
+normal! zo
+99
+normal! zo
+100
+normal! zo
+116
+normal! zo
+118
+normal! zo
+134
+normal! zo
+136
+normal! zo
+154
+normal! zo
+165
+normal! zo
+165
+normal! zo
+178
+normal! zo
+58
+normal! zo
+73
+normal! zo
+78
+normal! zo
+79
+normal! zo
+94
+normal! zo
+97
+normal! zo
+98
+normal! zo
+114
+normal! zo
+116
+normal! zo
+132
+normal! zo
+134
+normal! zo
+152
+normal! zo
+163
+normal! zo
+163
+normal! zo
+176
+normal! zo
+let s:l = 72 - ((10 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+72
 normal! 0
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
