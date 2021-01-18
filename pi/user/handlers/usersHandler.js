@@ -38,10 +38,11 @@ userHandler.initialise = function (resourceConfig) {
     const users = await User.query()
     for(var user of users){
       user.type = 'users'
+      user.id = user.id.toString()
     }
 
-    console.log(users)
-    console.log(JSON.stringify([users]))
+    // console.log(users)
+    // console.log(JSON.stringify([users]))
 
     resources[resourceConfig.resource] = users || resourceConfig.examples
 
